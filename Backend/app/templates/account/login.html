@@ -1,0 +1,110 @@
+{% extends "account/base.html" %}
+{% load static %}
+{% block title %} Login {% endblock title %}
+{% block content %}
+    <!-- Start Page Title Area -->
+    <div class="page-title-area">
+        <div class="container">
+            <div class="page-title-content">
+                <h2>Login</h2>
+                <ul>
+                    <li>
+                        <a href="{% url 'home' %}">
+                            Home 
+                        </a>
+                    </li>
+
+                    <li class="active">Login</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Background Shapes -->
+        <div class="page-shape">
+            <div class="shape1">
+                <img src="{% static 'images/shape/1.png' %}" alt="shape">
+            </div>
+            <div class="shape3">
+                <img src="{% static 'images/shape/3.png' %}" alt="shape">
+            </div>
+            <div class="shape4">
+                <img src="{% static 'images/shape/4.png' %}" alt="shape">
+            </div>
+            <div class="shape5">
+                <img src="{% static 'images/shape/5.png' %}" alt="shape">
+            </div>
+            <div class="shape6">
+                <img src="{% static 'images/shape/6.png' %}" alt="shape">
+            </div>
+        </div>
+    </div>
+    <section class="signup-area ptb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="signup-form">
+                        <div class="section-tittle text-center">
+                            <h2>Login</h2>
+                            <p>Please login an account</p>
+                        </div>
+                        {% if messages %}
+                            <div class="container mt-3">
+                                {% for message in messages %}
+                                    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                                        {{ message }}
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                        {% if form.errors %}
+                            <div class="alert alert-danger" role="alert">
+                                <div id="form_errors">
+                                    {% for _, value in form.errors.items %}
+                                        <strong>{{ value }}</strong><br>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        {% endif %}
+                        <form method="POST">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12">
+                                    <div class="form-group">
+                                        {{ form.username }}
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-sm-12">
+                                    <div class="form-group">
+                                        {{ form.password }}
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="privecy-txt">
+                                        {{ form.remember_me }}
+                                        <label>
+                                            Remember me
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button class="box-btn signup-btn" href="#" id="login" type="submit">
+                                        Sign In
+                                    </button>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <p class="al-acc">
+                                        Do not have an account?
+                                        <a href="{% url 'sign_up' %}"> Sign Up</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Page Title Area --> 
+{% endblock content %}

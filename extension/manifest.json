@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Paso",
+    "version": "1.0",
+    "permissions": ["tabs", "scripting", "activeTab", "sidePanel", "contextMenus", 
+        "storage","tabCapture"],
+    "host_permissions": ["<all_urls>"],
+    "web_accessible_resources": [
+        {
+            "resources": ["static/*", "css/*","js/*"],
+            "matches": ["<all_urls>"], 
+			"use_dynamic_url": true
+        }
+    ],
+	"content_security_policy": {
+		"extension_pages": "script-src 'self'; object-src 'self';"
+	},
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js":["js/content.js","js/summarise.js"]
+        }
+    ],
+    "background": {
+        "service_worker": "js/service-worker.js"
+      }
+  }

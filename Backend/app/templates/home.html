@@ -1,0 +1,94 @@
+{% extends "account/base.html" %}
+{% load static %}
+{% block title %}Home{% endblock title%}
+
+{% block content %}
+    <!-- Banner Area -->
+    <section class="banner-area">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="banner-content">
+                                <h1>
+                                    Hello {{ user.username.title|default:'Guest' }}
+                                </h1>
+                                <p>
+                                    For more detailed information please contact us
+                                </p>
+                                <div class="banner-btn">
+                                    <a href="{% url 'contact' %}" class="box-btn">Contact Us</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="banner-img">
+                                <img src="{% static 'images/home-bg-1-img.png' %}" alt="banner-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-shape">
+            <div class="shape1">
+                <img src="{% static 'images/shape/1.png' %}" alt="shape">
+            </div>
+            <div class="shape2">
+                <img src="{% static 'images/shape/2.png' %}" alt="shape">
+            </div>
+            <div class="shape3">
+                <img src="{% static 'images/shape/3.png' %}" alt="shape">
+            </div>
+            <div class="shape4">
+                <img src="{% static 'images/shape/4.png' %}" alt="shape">
+            </div>
+            <div class="shape5">
+                <img src="{% static 'images/shape/5.png' %}" alt="shape">
+            </div>
+            <div class="shape6">
+                <img src="{% static 'images/shape/6.png' %}" alt="shape">
+            </div>
+        </div>
+    </section>
+    <!-- End Banner Area -->
+
+    <!-- Start Client Area -->
+    <section class="client-area ptb-100 bg-color">
+        <div class="container">
+            <div class="section-title">
+                <span>Testimonials</span>
+                <h2>What Our Client’s Say</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A facilis vel consequatur tempora atque blanditiis exercitationem incidunt, alias corporis quam assumenda dicta.</p>
+            </div>
+
+            <div class="client-wrap owl-carousel owl-theme">
+                <div class="single-client">
+                    <img src="{% static 'images/client/1.jpg' %}" alt="img">
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem Ipsum is simply dummy text of the printing Quis suspendisse typesetting ipsum dolor sit amet,</p>
+
+                    <h3>Steven Jony</h3>
+                    <span>CEO of Company</span>
+                </div>
+                
+                <div class="single-client">
+                    <img src="{% static 'images/client/2.jpg' %}" alt="img">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem Ipsum is simply dummy text of the printing Quis suspendisse typesetting ipsum dolor sit amet,</p>
+
+                    <h3>Omit Jacson</h3>
+                    <span>Company Founder</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Client Area -->
+    <script>
+        var token = "{{ token }}"; 
+        localStorage.setItem('token', token);
+        window.dispatchEvent(new Event('tokenUpdated'));
+
+        // lấy file từ local storage 
+    </script>
+{% endblock content %}

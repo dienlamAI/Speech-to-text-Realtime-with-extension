@@ -1,0 +1,2 @@
+ASGI (asgi.py): triển khai ứng dụng web bất đồng bộ.là một đặc tả cho các máy chủ web không đồng bộ để giao tiếp với ứng dụng web. Nó cho phép xử lý các kết nối tồn tại lâu dài và các công việc không đồng bộ.
+WSGI là một giao diện tiêu chuẩn giữa máy chủ web và ứng dụng web Python. Nó là một giao diện đơn giản hơn so với ASGI và phù hợp với các máy chủ web đồng bộ truyền thống.

@@ -1,0 +1,145 @@
+﻿{% extends "account/base.html" %}
+{% load static %}
+{% block title %}Teams{% endblock title%}
+
+{% block content %}
+    <!-- Start Page Title Area -->
+    <div class="page-title-area">
+        <div class="container">
+            <div class="page-title-content">
+                <h2>Teams</h2>
+                <ul>
+                    <li>
+                        <a href="{% url 'home' %}">
+                            Home 
+                        </a>
+                    </li>
+
+                    <li class="active">Teams</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-shape">
+            <div class="shape1">
+                <img src="{% static 'images/shape/1.png' %}" alt="shape">
+            </div>
+            <div class="shape3">
+                <img src="{% static 'images/shape/3.png' %}" alt="shape">
+            </div>
+            <div class="shape4">
+                <img src="{% static 'images/shape/4.png' %}" alt="shape">
+            </div>
+            <div class="shape5">
+                <img src="{% static 'images/shape/5.png' %}" alt="shape">
+            </div>
+            <div class="shape6">
+                <img src="{% static 'images/shape/6.png' %}" alt="shape">
+            </div>
+        </div>
+    </div>
+    <!-- End Page Title Area -->
+
+    <!-- Team -->
+    <section class="team-area pt-100 pb-70">
+        <div class="container">
+            <div class="section-title">
+                <h2>People Who Are Behind The Achievements</h2>
+                <p>Members of the company</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-team">
+                        <div class="team-img">
+                            <img src="{% static 'images/teams/nguyen van nam.jpg' %}" alt="team">
+                        </div>
+                        <div class="team-content">
+                            <h3>Nguyen Van Nam</h3>
+                            <p>CEO</p>
+                            <ul class="social">
+                                <li>
+                                    <a href="# " target="_blank">
+                                        <i class="bx bxl-facebook"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-team">
+                        <div class="team-img">
+                            <img src="{% static 'images/teams/hoang tien anh.jpg' %}" alt="team">
+                        </div>
+                        <div class="team-content">
+                            <h3>Hoang Tien Anh</h3>
+                            <p>Manager</p>
+                            <ul class="social">
+                                <li>
+                                    <a href="# " target="_blank">
+                                        <i class="bx bxl-facebook"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-team">
+                        <div class="team-img">
+                            <img src="{% static 'images/teams/le thanh di.jpg' %}" alt="team">
+                        </div>
+                        <div class="team-content">
+                            <h3>Le Thanh Di</h3>
+                            <p>Manager</p>
+                            <ul class="social">
+                                <li>
+                                    <a href="# " target="_blank">
+                                        <i class="bx bxl-facebook"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-team">
+                        <div class="team-img">
+                            <img src="{% static 'images/teams/duong van tai.jpg' %}" alt="team">
+                        </div>
+                        <div class="team-content">
+                            <h3>Duong Van Tai</h3>
+                            <p>Project Manager</p>
+                            <ul class="social">
+                                <li>
+                                    <a href="# " target="_blank">
+                                        <i class="bx bxl-facebook"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-team">
+                        <div class="team-img">
+                            <img src="{% static 'images/teams/tran xuan dien.jpg' %}" alt="team">
+                        </div>
+                        <div class="team-content">
+                            <h3>Tran Xuan Dien</h3>
+                            <p>Marketing Support</p>
+                            <ul class="social">
+                                <li>
+                                    <a href="# " target="_blank">
+                                        <i class="bx bxl-facebook"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Team -->
+{% endblock content %}

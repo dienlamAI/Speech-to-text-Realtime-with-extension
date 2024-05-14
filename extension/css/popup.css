@@ -1,0 +1,362 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Chat container */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Chat header */
+.chat-header { 
+  justify-content: center;
+  z-index: 1;
+}
+.chat-header-child{ 
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 15px;
+  background-color: #fff; 
+  width: 100%; 
+  margin: 0;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  user-select: none;
+}
+
+.dropdown-menu {
+  position: relative;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+.dropdown-menu:hover {
+  background-color: #f3f3f3;
+}
+
+.dropdown-content {
+  display: none;
+  justify-content: center;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 100%;
+  right: 0;
+  border-radius: 10px;
+}
+
+.dropdown-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.dropdown-row > div {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  margin: 4px;
+  border-radius: 10px;
+}
+
+.dropdown-row > div:hover {
+  background-color: #ffffff; 
+}
+
+/* Introduce */
+.introduce-container {
+  display: flex;
+  border-radius: 10px; 
+  margin: 120px 0 0 0 ;
+}
+.btn-neutral:hover{
+  background-color: rgb(247 247 247);
+
+}
+
+/* chat-messages */
+.chat-messages{
+  margin: 20px 0 130px 0;
+  display: flex;
+  max-width: 100%;
+  width: 100%;
+  flex-direction: column;
+  align-items: center; 
+  box-sizing: border-box;
+  font-size: 16px;
+}
+.chat-messages-child{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 800px;
+}
+.make-sound,
+.copy-chat{
+  cursor: pointer;
+}
+.make-sound:hover,
+.copy-chat:hover{
+  color: #4d4d4d;
+}
+.summarise-text-container{
+  display: flex;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  margin: 0;
+  position: relative;
+}
+.summarise-text-container::before {
+  content: '';
+  position: absolute; 
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px; 
+  width: 4px;  
+  height: calc(100% - 20px);  
+  background-color: #a5a5a5;  
+  border-radius: 10px;   
+}
+.summarise-text-child{
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 15px 15px 25px;
+  color: #4d4d4d;
+  font-size: 16px;
+  margin: 0;
+  font-style: italic;
+}
+.info-summarise-container{
+  display: flex;
+  flex-direction: column; 
+  padding: 0;
+  border-radius: 10px; 
+  margin: -10px 0 0 0;
+}
+.info-summarise-child{
+  font-weight: 500; 
+}
+/* Chat input */
+.chat-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 5px 0 5px;
+  width: calc(100% - 20px);
+  max-width: 800px;
+  position: fixed;
+  left: 10px;
+  right: 10px;
+  bottom: 0;
+  margin: auto;
+  transition: border-color 0.3s;
+  background-color: #fff;
+} 
+.message-options {
+  display: flex;
+  flex-direction: row; 
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 6px;
+} 
+
+.message-options > div {
+  margin: 0 10px 0 0;
+}
+.bot-container {
+  position: relative;
+  cursor: pointer;
+  border-radius: 18px;
+  background: rgba(0, 0, 0, .03);  
+  padding: 6px;
+}
+.bot-container:hover {
+  background: #ececec; 
+}
+.dropdown-content-bot-menu {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  flex-direction: column;
+  min-width: 130px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  border-radius: 10px;
+  top: auto;
+  bottom: 100%;
+  padding: 5px;
+}
+  
+.dropdown-content-bot-menu > div:hover {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+.dropdown-content-child {
+  display: flex;
+  flex-direction: row; 
+  justify-content: flex-start;
+  align-items: center;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+.dropdown-content-child:hover {
+  background-color: #f2f2f2;  
+}
+
+.dropdown-avatar-bot {
+  height: 20px;  
+  width: 20px;
+  border-radius: 50%;  
+  background-color: #797979; 
+}  
+.dropdown-name-bot {
+  margin-left: 8px;  
+  font-size: 14px;
+}
+.bot-chill{
+  display: flex; 
+  flex-direction: row;  
+  align-items: center;
+}
+.avatar-bot-chill {
+  display: flex;
+  align-items: center;
+}
+.avatar-bot-options {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #797979;
+  flex-shrink: 0;
+}
+
+.chevron-down {
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 6px;
+} 
+.summarise-container{
+  display: flex;
+}
+.summarise-child{
+  align-items: center;
+  justify-items: center;
+  padding: 4px 6px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.summarise-child:hover{
+  background-color: #f0f0f0;
+}
+.upload-button-image-container{
+  display: flex;
+}
+#upload-button-image{ 
+  align-items: center;
+  justify-items: center;
+  padding: 4px 6px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+#upload-button-image:hover{
+  background-color: #f0f0f0; 
+}
+#myProgress {
+  max-width: 100px;
+  height: 30px;  
+  display: none; 
+} 
+
+/* input container */
+.input-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 15px;
+  background-color: rgb(247 247 247);
+  border: 1.5px solid #ccc;  
+}
+
+.input-container textarea {
+  flex: 1;
+  resize: none;
+  border: 1px solid rgb(247 247 247);
+  font-size: 16px;
+  outline: none;
+  background-color: rgb(247 247 247);
+  width: 100%;
+  overflow-y: auto;
+  height: 40px;
+}
+.input-container textarea::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* màu nền của track */
+.input-container textarea::-webkit-scrollbar-track {
+  background: #ffffff;  
+  border-radius: 15px;
+}
+
+/* màu của thanh cuộn */
+.input-container textarea::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 15px; 
+}
+
+.send-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  border-radius: 15px;
+  cursor: pointer;
+  color: #4d4d4d;
+}
+
+.send-button:hover {
+  background-color: #f3f3f3;
+}
+.footer-container{
+  color: #676767;
+  font-size: .75rem;
+  line-height: 1rem;
+  text-align: center;
+}
+@media screen and (max-width: 450px) { 
+  .message{
+    flex-wrap: wrap;
+  }
+}
