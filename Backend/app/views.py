@@ -268,12 +268,15 @@ from asgiref.sync import async_to_sync
 class RagChatAPI(APIView):
     authentication_classes = [TokenAuthentication]
     permission_classes = [IsAuthenticated]
+
     def post(self, request):
         question = request.data.get('message', '')
         links = ChatbotLink.objects.filter(username=request.user)
         first_link = links.first().link
         print("first_link: ", first_link)
+        
         start_time = time.time()
-        message = async_to_sync(process_pdf_and_ask_question)(first_link, question) 
+        message = process_pdf_and_ask_question(first_link, question) 
         print("time_process", time.time() - start_time)
+        
         return Response({'message': message}, status=status.HTTP_200_OK)
