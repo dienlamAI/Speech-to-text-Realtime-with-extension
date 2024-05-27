@@ -7,7 +7,7 @@ Dưới đây là các bước cài đặt và chạy dự án Backend. Hãy ch�
 Mở terminal hoặc command prompt và chạy lệnh sau để clone dự án:
 
 ```
-git clone https://github.com/Research-Product-Lab/Backend.git
+git clone link
 ```
 
 ## Bước 2: Tạo môi trường ảo
