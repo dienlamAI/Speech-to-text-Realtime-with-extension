@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Thêm sự kiện scroll cho việc hiển thị đường viền dưới của avatar khi cuộn
     const avatarContainer = document.querySelector(".chat-header-child");
     window.addEventListener("scroll", function () {
         if (window.scrollY > 0) {
@@ -9,14 +8,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Sự kiện toggleDropdown cho biểu tượng danh sách
     function toggleDropdownList() {
         const dropdownContent = document.querySelector(".dropdown-content");
         dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
     }
     document.querySelector(".list-icon").addEventListener("click", toggleDropdownList);
 
-    // Sự kiện click bên ngoài dropdown để đóng dropdown
     document.addEventListener("click", function (event) {
         const targetElement = event.target;
         if (!targetElement.closest(".list-icon")) {
@@ -25,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Liên quan đến việc mở rộng và hiệu ứng textarea khi nhập nội dung
     const textarea = document.querySelector('#message-input');
     const chatInput = document.querySelector('.input-container');
 
@@ -76,7 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    // Sự kiện click vào nút gửi tin nhắn
     const sendMessageButton = document.querySelector('.send-button');
     const sendMessageButtonIcon = document.querySelector('.send-button > svg');
     const chatMessagesContainer = document.querySelector('.chat-messages-child');
