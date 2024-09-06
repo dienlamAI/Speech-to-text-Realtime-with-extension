@@ -1,46 +1,46 @@
-# Hướng dẫn cài đặt và chạy Backend
+# Installation and Running the Backend
 
-Dưới đây là các bước cài đặt và chạy dự án Backend. Hãy chắc chắn rằng bạn đã cài đặt Python và `ffmpeg` trên máy của bạn trước khi bắt đầu.
+Here are the steps to install and run the Backend project. Make sure you have Python and `ffmpeg` installed on your machine before starting.
 
-## Bước 1: Clone dự án
+## Step 1: Clone the project
 
-Mở terminal hoặc command prompt và chạy lệnh sau để clone dự án:
+Open a terminal or command prompt and run the following command to clone the project:
 
 ```
-git clone link
+git clone [link](https://github.com/DienStudio/Speech-to-text-Realtime-with-extension.git)
 ```
 
-## Bước 2: Tạo môi trường ảo
+## Step 2: Create a virtual environment
 
-Chuyển đến thư mục `Backend` vừa clone:
+Navigate to the `Backend` folder you just cloned:
 
 ```
 cd Backend
 ```
 
-Tạo một môi trường ảo bằng cách sử dụng Python:
+Create a virtual environment using Python:
 
 ```
 python -m venv .venv
 ```
 
-## Bước 3: Kích hoạt môi trường ảo và cài đặt các thư viện cần thiết
+## Step 3: Activate the virtual environment and install required libraries
 
-Đối với Windows, kích hoạt môi trường ảo:
+For Windows, activate the virtual environment:
 
 ```
 .venv\Scripts\activate
 ```
 
-Sau đó, cài đặt các thư viện cần thiết từ `requirements.txt`:
+Then, install the necessary libraries from `requirements.txt`:
 
 ```
 pip install -r requirements.txt
 ```
 
-## Bước 4: Cài đặt thư viện bổ sung
+## Step 4: Install additional libraries
 
-Chạy các lệnh sau để cài đặt các thư viện bổ sung:
+Run the following commands to install additional libraries:
 
 ```
 pip install openai==1.13.3
@@ -57,27 +57,28 @@ pip install google-api-python-client==2.120.0
 pip install google-api-core==2.10.2
 ```
 
-## Bước 5: Chạy máy chủ
+## Step 5: Run the server
 
-Trước khi chạy máy chủ, hãy đảm bảo rằng bạn đã cài đặt `ffmpeg` và thêm nó vào biến môi trường (path environment variable) của hệ thống. Khởi động lại máy của bạn nếu chưa có `ffmpeg`.
+Before running the server, ensure that you have `ffmpeg` installed and added to your system's path environment variable. Restart your machine if `ffmpeg` is not installed.
 
-Chạy máy chủ bằng cách sử dụng lệnh:
+Run the server with the following command:
 
 ```
 python manage.py runserver
 ```
 
-Bây giờ, bạn có thể truy cập máy chủ thông qua địa chỉ mặc định: `http://127.0.0.1:8000/`.
+You can now access the server via the default address: `http://127.0.0.1:8000/`.
 
-## Sử dụng dùng Postman để test API
-Login tài khoản: 
-- Tên: test1
-- MK: 123
-- Sử dụng audio.webm trên folder ./Data/
-F12 vào phần Application phía dưới có Local storage click vào `http://127.0.0.1:8000/` và copy đoạn token
+## Using Postman to test the API
+Login with the following credentials:
+- Username: test1
+- Password: 123
+- Use the audio.webm file from the `./Data/` folder
+
+Open the developer console (F12), go to the "Application" tab, scroll down to "Local Storage," click on `http://127.0.0.1:8000/`, and copy the token.
   i
 ![image](https://github.com/Research-Product-Lab/Backend/assets/97231719/c844aa03-cb25-4c25-aefe-61b7c2d108c5)
 
-Và dữ liệu được chuyền dưới dạng .webm 
+And the data is passed in `.webm` format.
 ![image](https://github.com/Research-Product-Lab/Backend/assets/97231719/ac69a57e-4413-4ca0-90b4-bfa24edfba99)
 
