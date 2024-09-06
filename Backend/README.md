@@ -76,7 +76,6 @@ Login with the following credentials:
 - Use the audio.webm file from the `./Data/` folder
 
 Open the developer console (F12), go to the "Application" tab, scroll down to "Local Storage," click on `http://127.0.0.1:8000/`, and copy the token.
-  i
 ![image](https://github.com/Research-Product-Lab/Backend/assets/97231719/c844aa03-cb25-4c25-aefe-61b7c2d108c5)
 
 And the data is passed in `.webm` format.
