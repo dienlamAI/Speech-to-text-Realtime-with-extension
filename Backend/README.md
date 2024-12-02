@@ -7,7 +7,7 @@ Here are the steps to install and run the Backend project. Make sure you have Py
 Open a terminal or command prompt and run the following command to clone the project:
 
 ```
-git clone [link](https://github.com/DienStudio/Speech-to-text-Realtime-with-extension.git)
+git clone [link](https://github.com/xndien2004/Speech-to-text-Realtime-with-extension.git)
 ```
 
 ## Step 2: Create a virtual environment
